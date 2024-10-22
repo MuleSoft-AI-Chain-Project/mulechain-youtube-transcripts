@@ -3,7 +3,7 @@
     "id": "java",
     "attributes": {
       "type": "com.mule.mulechain.internal.internal.MACTranscriptsExtension",
-      "version": "0.0.5-SNAPSHOT"
+      "version": "0.0.18-SNAPSHOT"
     }
   },
   "name": "MAC Transcripts",

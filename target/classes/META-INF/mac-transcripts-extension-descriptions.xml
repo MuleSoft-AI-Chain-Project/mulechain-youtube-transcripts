@@ -4,6 +4,9 @@
         <config name="config">
             <description><![CDATA[Default configuration]]></description>
             <parameters>
+                <parameter name="providerType">
+                    <description><![CDATA[]]></description>
+                </parameter>
                 <parameter name="apiKey">
                     <description><![CDATA[]]></description>
                 </parameter>
@@ -74,9 +77,6 @@
                 <parameter name="videoId">
                     <description><![CDATA[]]></description>
                 </parameter>
-                <parameter name="toLanguage">
-                    <description><![CDATA[]]></description>
-                </parameter>
                 <parameter name="outputMimeType">
                     <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
                 </parameter>
@@ -85,6 +85,9 @@
                 </parameter>
                 <parameter name="streamingStrategy">
                     <description><![CDATA[Configure if repeatable streams should be used and their behaviour]]></description>
+                </parameter>
+                <parameter name="languages">
+                    <description><![CDATA[]]></description>
                 </parameter>
                 <parameter name="target">
                     <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
