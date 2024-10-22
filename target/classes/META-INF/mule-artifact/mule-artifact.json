@@ -2,11 +2,11 @@
   "extensionModelLoaderDescriptor": {
     "id": "java",
     "attributes": {
-      "type": "com.mule.mulechain.internal.internal.YouTubeTranscriptsExtension",
-      "version": "0.0.2-SNAPSHOT"
+      "type": "com.mule.mulechain.internal.internal.MACTranscriptsExtension",
+      "version": "0.0.5-SNAPSHOT"
     }
   },
-  "name": "YouTube Transcripts",
+  "name": "MAC Transcripts",
   "requiredProduct": "MULE",
   "classLoaderModelLoaderDescriptor": {
     "id": "mule",
