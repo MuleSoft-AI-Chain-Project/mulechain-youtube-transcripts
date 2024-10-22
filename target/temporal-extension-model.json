@@ -1,14 +1,14 @@
 {
   "name": "MAC Transcripts",
   "description": "This is the main class of an extension, is the entry point from which configurations, connection providers, operations and sources are going to be declared.",
-  "version": "0.0.5-SNAPSHOT",
+  "version": "0.0.18-SNAPSHOT",
   "vendor": "Mulesoft",
   "category": "COMMUNITY",
   "xmlDsl": {
     "prefix": "mac-transcripts",
     "namespace": "http://www.mulesoft.org/schema/mule/mac-transcripts",
     "schemaLocation": "http://www.mulesoft.org/schema/mule/mac-transcripts/current/mule-mac-transcripts.xsd",
-    "schemaVersion": "0.0.5-SNAPSHOT",
+    "schemaVersion": "0.0.18-SNAPSHOT",
     "xsdFileName": "mule-mac-transcripts.xsd"
   },
   "resources": [],
@@ -38,6 +38,14 @@
               "hasDynamicType": false,
               "required": true,
               "isConfigOverride": false,
+              "valueProviderModel": {
+                "actingParameters": [],
+                "partOrder": 1,
+                "providerName": "providerType",
+                "requiresConfiguration": false,
+                "requiresConnection": false,
+                "isOpen": true
+              },
               "expressionSupport": "SUPPORTED",
               "role": "BEHAVIOUR",
               "dslConfiguration": {
@@ -50,6 +58,32 @@
                 "text": false,
                 "query": false,
                 "order": 1
+              },
+              "allowedStereotypeModels": [],
+              "name": "providerType",
+              "description": "",
+              "modelProperties": {}
+            },
+            {
+              "type": {
+                "format": "java",
+                "type": "String"
+              },
+              "hasDynamicType": false,
+              "required": true,
+              "isConfigOverride": false,
+              "expressionSupport": "SUPPORTED",
+              "role": "BEHAVIOUR",
+              "dslConfiguration": {
+                "allowsInlineDefinition": true,
+                "allowsReferences": true,
+                "allowTopLevelDefinition": false
+              },
+              "layoutModel": {
+                "password": false,
+                "text": false,
+                "query": false,
+                "order": 2
               },
               "allowedStereotypeModels": [],
               "name": "apiKey",
@@ -154,7 +188,7 @@
                 "password": false,
                 "text": false,
                 "query": false,
-                "order": 2,
+                "order": 3,
                 "tabName": "Advanced"
               },
               "allowedStereotypeModels": [],
@@ -1121,32 +1155,6 @@
                     "type": "String"
                   },
                   "hasDynamicType": false,
-                  "required": true,
-                  "isConfigOverride": false,
-                  "expressionSupport": "SUPPORTED",
-                  "role": "BEHAVIOUR",
-                  "dslConfiguration": {
-                    "allowsInlineDefinition": true,
-                    "allowsReferences": true,
-                    "allowTopLevelDefinition": false
-                  },
-                  "layoutModel": {
-                    "password": false,
-                    "text": false,
-                    "query": false,
-                    "order": 2
-                  },
-                  "allowedStereotypeModels": [],
-                  "name": "toLanguage",
-                  "description": "",
-                  "modelProperties": {}
-                },
-                {
-                  "type": {
-                    "format": "java",
-                    "type": "String"
-                  },
-                  "hasDynamicType": false,
                   "required": false,
                   "isConfigOverride": false,
                   "expressionSupport": "SUPPORTED",
@@ -1160,7 +1168,7 @@
                     "password": false,
                     "text": false,
                     "query": false,
-                    "order": 3,
+                    "order": 2,
                     "tabName": "Advanced"
                   },
                   "allowedStereotypeModels": [],
@@ -1187,7 +1195,7 @@
                     "password": false,
                     "text": false,
                     "query": false,
-                    "order": 4,
+                    "order": 3,
                     "tabName": "Advanced"
                   },
                   "allowedStereotypeModels": [],
@@ -1363,7 +1371,7 @@
                     "password": false,
                     "text": false,
                     "query": false,
-                    "order": 5,
+                    "order": 4,
                     "tabName": "Advanced"
                   },
                   "allowedStereotypeModels": [],
@@ -1392,6 +1400,55 @@
               },
               "showInDsl": false,
               "name": "General",
+              "description": "",
+              "modelProperties": {}
+            },
+            {
+              "parameters": [
+                {
+                  "type": {
+                    "format": "java",
+                    "type": "String"
+                  },
+                  "hasDynamicType": false,
+                  "required": true,
+                  "isConfigOverride": false,
+                  "valueProviderModel": {
+                    "actingParameters": [],
+                    "partOrder": 1,
+                    "providerName": "languages",
+                    "requiresConfiguration": false,
+                    "requiresConnection": false,
+                    "isOpen": true
+                  },
+                  "expressionSupport": "SUPPORTED",
+                  "role": "BEHAVIOUR",
+                  "dslConfiguration": {
+                    "allowsInlineDefinition": true,
+                    "allowsReferences": true,
+                    "allowTopLevelDefinition": false
+                  },
+                  "layoutModel": {
+                    "password": false,
+                    "text": false,
+                    "query": false,
+                    "order": 5
+                  },
+                  "allowedStereotypeModels": [],
+                  "name": "languages",
+                  "description": "",
+                  "modelProperties": {}
+                }
+              ],
+              "exclusiveParametersModels": [],
+              "layoutModel": {
+                "password": false,
+                "text": false,
+                "query": false,
+                "order": 2
+              },
+              "showInDsl": false,
+              "name": "Additional Properties",
               "description": "",
               "modelProperties": {}
             },
@@ -1464,7 +1521,7 @@
                 "password": false,
                 "text": false,
                 "query": false,
-                "order": 2
+                "order": 3
               },
               "showInDsl": false,
               "name": "Output",

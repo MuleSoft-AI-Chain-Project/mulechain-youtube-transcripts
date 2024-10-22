@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import org.mule.runtime.extension.api.annotation.Alias;
 import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.Config;
+import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -126,10 +127,13 @@ public class MACTranscriptsOperations {
    */
   @MediaType(value = APPLICATION_JSON, strict = false)
   @Alias("Translate-transcript")
-  public InputStream getTranscriptTranslated(String videoId, String toLanguage, @Config MACTranscriptsConfiguration configuration) throws TranscriptRetrievalException {
+  public InputStream getTranscriptTranslated(String videoId, @Config MACTranscriptsConfiguration configuration, @ParameterGroup(name = "Additional Properties") MACTranscriptsLanguageParameterProvider toLanguage) throws TranscriptRetrievalException {
     try{
+
+      String code = extractValueWithinBrackets(toLanguage.getLanguages());
+
       TranscriptList transcriptList = youtubeTranscriptApi.listTranscripts(videoId);
-      Transcript transcript = transcriptList.findGeneratedTranscript("en").translate(toLanguage);
+      Transcript transcript = transcriptList.findGeneratedTranscript("en").translate(code);
       TranscriptContent transcriptContent = transcript.fetch();
       TranscriptFormatter jsonFormatter = TranscriptFormatters.jsonFormatter();
       String formattedContent = jsonFormatter.format(transcriptContent);
@@ -157,4 +161,17 @@ public class MACTranscriptsOperations {
     }
   }
 
+
+  // Method to extract value within brackets
+  private static String extractValueWithinBrackets(String input) {
+    // Find the position of the opening and closing brackets
+    int start = input.indexOf('(');
+    int end = input.indexOf(')');
+
+    // Extract and return the substring within the brackets
+    if (start != -1 && end != -1 && start < end) {
+      return input.substring(start + 1, end);
+    }
+    return null;  // Return null if no brackets found
+  }
 }
