@@ -1,5 +1,5 @@
 :toc:               left
-:toc-title:         YouTube Transcripts Module
+:toc-title:         MAC Transcripts Module
 :toclevels:         2
 :last-update-label!:
 :docinfo:
@@ -7,7 +7,7 @@
 :icons: font
 
 
-= YouTube Transcripts Module Documentation Reference
+= MAC Transcripts Module Documentation Reference
 
 +++
 This is the main class of an extension, is the entry point from which configurations, connection providers, operations and sources are going to be declared.
@@ -44,7 +44,7 @@ Default configuration
 
 [[Fetch-transcript]]
 === Fetch Transcript
-`<youtube-transcripts:fetch-transcript>`
+`<mac-transcripts:fetch-transcript>`
 
 +++
 Gets a transcript for a youtube video by video Id (https://www.youtube.com/watch?v=h4iG90zkrig, everthing after v= is the videoId)
@@ -79,7 +79,7 @@ Gets a transcript for a youtube video by video Id (https://www.youtube.com/watch
 
 [[Get-metadata]]
 === Get Metadata
-`<youtube-transcripts:get-metadata>`
+`<mac-transcripts:get-metadata>`
 
 +++
 Gets meta data for a transcript by youtube video Id (https://www.youtube.com/watch?v=h4iG90zkrig, everthing after v= is the videoId)
@@ -113,7 +113,7 @@ Gets meta data for a transcript by youtube video Id (https://www.youtube.com/wat
 
 [[Translate-transcript]]
 === Translate Transcript
-`<youtube-transcripts:translate-transcript>`
+`<mac-transcripts:translate-transcript>`
 
 +++
 Gets a transcript for a youtube video by video Id (https://www.youtube.com/watch?v=h4iG90zkrig, everthing after v= is the videoId)
@@ -125,7 +125,6 @@ Gets a transcript for a youtube video by video Id (https://www.youtube.com/watch
 | Name | Type | Description | Default Value | Required
 | Configuration | String | The name of the configuration to use. | | *x*{nbsp}
 | Video Id a| String |  |  | *x*{nbsp}
-| From Language a| String |  |  | *x*{nbsp}
 | To Language a| String |  |  | *x*{nbsp}
 | Output Mime Type a| String |  +++The mime type of the payload that this operation outputs.+++ |  | {nbsp}
 | Output Encoding a| String |  +++The encoding of the payload that this operation outputs.+++ |  | {nbsp}

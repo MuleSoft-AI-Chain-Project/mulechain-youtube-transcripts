@@ -14,7 +14,7 @@
         </config>
     </configs>
     <connections/>
-    <extension name="YouTube Transcripts">
+    <extension name="MAC Transcripts">
         <description><![CDATA[This is the main class of an extension, is the entry point from which configurations, connection providers, operations and sources are going to be declared.]]></description>
         <parameters/>
     </extension>
@@ -72,9 +72,6 @@
             <description><![CDATA[Gets a transcript for a youtube video by video Id (https://www.youtube.com/watch?v=h4iG90zkrig, everthing after v= is the videoId)]]></description>
             <parameters>
                 <parameter name="videoId">
-                    <description><![CDATA[]]></description>
-                </parameter>
-                <parameter name="fromLanguage">
                     <description><![CDATA[]]></description>
                 </parameter>
                 <parameter name="toLanguage">

@@ -13,10 +13,10 @@ import static org.mule.sdk.api.meta.JavaVersion.JAVA_8;
  * This is the main class of an extension, is the entry point from which configurations, connection providers, operations
  * and sources are going to be declared.
  */
-@Xml(prefix = "youtube-transcripts")
-@Extension(name = "YouTube Transcripts")
-@Configurations(YouTubeTranscriptsConfiguration.class)
+@Xml(prefix = "mac-transcripts")
+@Extension(name = "MAC Transcripts")
+@Configurations(MACTranscriptsConfiguration.class)
 @JavaVersionSupport({JAVA_8, JAVA_11, JAVA_17})
-public class YouTubeTranscriptsExtension {
+public class MACTranscriptsExtension {
 
 }

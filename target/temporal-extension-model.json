@@ -1,15 +1,15 @@
 {
-  "name": "YouTube Transcripts",
+  "name": "MAC Transcripts",
   "description": "This is the main class of an extension, is the entry point from which configurations, connection providers, operations and sources are going to be declared.",
-  "version": "0.0.2-SNAPSHOT",
+  "version": "0.0.5-SNAPSHOT",
   "vendor": "Mulesoft",
   "category": "COMMUNITY",
   "xmlDsl": {
-    "prefix": "youtube-transcripts",
-    "namespace": "http://www.mulesoft.org/schema/mule/youtube-transcripts",
-    "schemaLocation": "http://www.mulesoft.org/schema/mule/youtube-transcripts/current/mule-youtube-transcripts.xsd",
-    "schemaVersion": "0.0.2-SNAPSHOT",
-    "xsdFileName": "mule-youtube-transcripts.xsd"
+    "prefix": "mac-transcripts",
+    "namespace": "http://www.mulesoft.org/schema/mule/mac-transcripts",
+    "schemaLocation": "http://www.mulesoft.org/schema/mule/mac-transcripts/current/mule-mac-transcripts.xsd",
+    "schemaVersion": "0.0.5-SNAPSHOT",
+    "xsdFileName": "mule-mac-transcripts.xsd"
   },
   "resources": [],
   "subTypes": [],
@@ -21,7 +21,7 @@
     {
       "stereotype": {
         "type": "CONFIG",
-        "namespace": "YOUTUBE-TRANSCRIPTS",
+        "namespace": "MAC-TRANSCRIPTS",
         "parent": {
           "type": "MODULE_CONFIG",
           "namespace": "MULE"
@@ -1137,32 +1137,6 @@
                     "order": 2
                   },
                   "allowedStereotypeModels": [],
-                  "name": "fromLanguage",
-                  "description": "",
-                  "modelProperties": {}
-                },
-                {
-                  "type": {
-                    "format": "java",
-                    "type": "String"
-                  },
-                  "hasDynamicType": false,
-                  "required": true,
-                  "isConfigOverride": false,
-                  "expressionSupport": "SUPPORTED",
-                  "role": "BEHAVIOUR",
-                  "dslConfiguration": {
-                    "allowsInlineDefinition": true,
-                    "allowsReferences": true,
-                    "allowTopLevelDefinition": false
-                  },
-                  "layoutModel": {
-                    "password": false,
-                    "text": false,
-                    "query": false,
-                    "order": 3
-                  },
-                  "allowedStereotypeModels": [],
                   "name": "toLanguage",
                   "description": "",
                   "modelProperties": {}
@@ -1186,7 +1160,7 @@
                     "password": false,
                     "text": false,
                     "query": false,
-                    "order": 4,
+                    "order": 3,
                     "tabName": "Advanced"
                   },
                   "allowedStereotypeModels": [],
@@ -1213,7 +1187,7 @@
                     "password": false,
                     "text": false,
                     "query": false,
-                    "order": 5,
+                    "order": 4,
                     "tabName": "Advanced"
                   },
                   "allowedStereotypeModels": [],
@@ -1389,7 +1363,7 @@
                     "password": false,
                     "text": false,
                     "query": false,
-                    "order": 6,
+                    "order": 5,
                     "tabName": "Advanced"
                   },
                   "allowedStereotypeModels": [],
@@ -1442,7 +1416,7 @@
                     "password": false,
                     "text": false,
                     "query": false,
-                    "order": 7,
+                    "order": 6,
                     "tabName": "Advanced"
                   },
                   "allowedStereotypeModels": [],
@@ -1473,7 +1447,7 @@
                     "password": false,
                     "text": false,
                     "query": false,
-                    "order": 8,
+                    "order": 7,
                     "tabName": "Advanced"
                   },
                   "allowedStereotypeModels": [],
@@ -1519,12 +1493,12 @@
   "notifications": [],
   "errors": [
     {
-      "error": "YOUTUBE-TRANSCRIPTS:RETRY_EXHAUSTED",
-      "parent": "MULE:RETRY_EXHAUSTED",
+      "error": "MAC-TRANSCRIPTS:CONNECTIVITY",
+      "parent": "MULE:CONNECTIVITY",
       "handleable": true
     },
     {
-      "error": "MULE:RETRY_EXHAUSTED",
+      "error": "MULE:CONNECTIVITY",
       "parent": "MULE:ANY",
       "handleable": true
     },
@@ -1533,12 +1507,12 @@
       "handleable": true
     },
     {
-      "error": "YOUTUBE-TRANSCRIPTS:CONNECTIVITY",
-      "parent": "MULE:CONNECTIVITY",
+      "error": "MAC-TRANSCRIPTS:RETRY_EXHAUSTED",
+      "parent": "MULE:RETRY_EXHAUSTED",
       "handleable": true
     },
     {
-      "error": "MULE:CONNECTIVITY",
+      "error": "MULE:RETRY_EXHAUSTED",
       "parent": "MULE:ANY",
       "handleable": true
     }
