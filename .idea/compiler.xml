@@ -10,10 +10,22 @@
         <processor name="org.mule.runtime.ast.internal.extension.loader.ASTExtensionResourcesGeneratorAnnotationProcessor" />
         <module name="mulechain-youtube-transcripts" />
       </profile>
+      <profile name="Annotation profile for mulechain-transcripts" enabled="true">
+        <sourceOutputDir name="target/classes/META-INF" />
+        <sourceTestOutputDir name="target/generated-sources/apt-test" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="extension.version" value="0.0.18-SNAPSHOT" />
+        <processor name="org.mule.runtime.ast.internal.extension.loader.ASTExtensionResourcesGeneratorAnnotationProcessor" />
+        <module name="mulechain-transcripts" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mulechain-youtube-transcripts" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mulechain-transcripts" options="-parameters" />
       <module name="mulechain-youtube-transcripts" options="-parameters" />
     </option>
   </component>

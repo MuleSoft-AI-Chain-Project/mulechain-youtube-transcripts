@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:youtube-transcripts="http://www.mulesoft.org/schema/mule/youtube-transcripts"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/youtube-transcripts http://www.mulesoft.org/schema/mule/youtube-transcripts/current/mule-youtube-transcripts.xsd">
+
+    <youtube-transcripts:config name="config" configId="configId">
+        <youtube-transcripts:connection requiredParameter="aValue" />
+    </youtube-transcripts:config>
+
+    <flow name="sayHiFlow">
+        <youtube-transcripts:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <youtube-transcripts:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>
